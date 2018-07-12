@@ -187,13 +187,18 @@ def _plot_html(figure_or_data, config, validate, default_width,
                               cls=utils.PlotlyJSONEncoder)
 
     configkeys = (
+        'staticPlot'
         'editable',
+        'edits',
         'autosizable',
+        'queueLength'
         'fillFrame',
         'frameMargins',
         'scrollZoom',
         'doubleClick',
         'showTips',
+        'showAxisDragHandles',
+        'showAxisRangeEntryBoxes',
         'showLink',
         'sendData',
         'linkText',
@@ -202,10 +207,16 @@ def _plot_html(figure_or_data, config, validate, default_width,
         'modeBarButtonsToRemove',
         'modeBarButtonsToAdd',
         'modeBarButtons',
+        'toImageButtonOptions',
         'displaylogo',
         'plotGlPixelRatio',
         'setBackground',
         'topojsonURL'
+        'mapboxAccessToken',
+        'logging',
+        'globalTransforms'
+        'locale',
+        'locales',
     )
 
     config_clean = dict((k, config[k]) for k in configkeys if k in config)
